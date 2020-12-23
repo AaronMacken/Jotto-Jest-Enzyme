@@ -64,9 +64,9 @@ describe('if there are words guessed', () => {
     });
 
     test('correct number of guessed words', () => {
-        const guessedWordsNodes = wrapper.find('guessedWord');
-        // correct only because we haven't guessed any words yet
-        expect(guessedWordsNodes.length).toBe(guessedWordsNodes.length);
+        const guessedWordsNodes = wrapper.find('.guessedWord');
+
+        expect(guessedWordsNodes.length).toBe(guessedWords.length);
     });
 });
 
