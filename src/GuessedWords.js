@@ -23,9 +23,9 @@ const GuessedWords = props => {
         contents = (
             <div className="guessedWords">
                 <h3>Guessed Words</h3>
-                <table>
-
-                    <thead>
+                <table className="table table-sm">
+                    {/* head */}
+                    <thead className="thead-light">
                         <tr>
                             <th>
                                 Guess
@@ -33,7 +33,7 @@ const GuessedWords = props => {
                             <th>Matching Letters</th>
                         </tr>
                     </thead>
-
+                    {/* body */}
                     <tbody>
                         { guessedWordsRows }
                     </tbody>
