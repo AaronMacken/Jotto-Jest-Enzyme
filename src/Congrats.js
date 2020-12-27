@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Congrats = (props) => {
+
+    const Congrats = (props) => {
     if (props.success) {
         return (
         <div className="success alert alert-success">
@@ -10,7 +11,8 @@ const Congrats = (props) => {
             </span>
         </div>
         )
-    }
+    }   
+
 
     return (
         <div />

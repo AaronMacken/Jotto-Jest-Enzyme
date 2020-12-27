@@ -1,9 +1,14 @@
+import React from 'react';
 import { shallow } from 'enzyme';
-
 import App from './App';
 
-test('renders without error', () => {
-  const appWrapper = shallow(<App />);
+const setup = () => {
+  return shallow(<App />);
+}
 
-  expect(appWrapper.length).toBe(1);
+it('renders without error', () => {
+  const appWrapper = setup();
+  const appContainer = appWrapper.find('.appContainer');
+
+  expect(appContainer.length).toBe(1);
 });
