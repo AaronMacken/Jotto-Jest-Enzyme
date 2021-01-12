@@ -27,4 +27,18 @@ describe('.getSecretWord', () => {
     // check to see if get secret word was run
     expect(mockGetSecretWord).toHaveBeenCalled();
   });
+
+  it('should not update on app update', () => {
+    const wrapper = setup();
+
+    // mockFn was called once on mount - expected
+    // so we clear it for testing purposes
+    mockGetSecretWord.mockClear();
+
+    // trigger an update
+    wrapper.setProps();
+
+    // check that mockFn was not called
+    expect(mockGetSecretWord).not.toHaveBeenCalled();
+  });
 });

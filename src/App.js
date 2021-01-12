@@ -1,6 +1,8 @@
 import './App.css';
 import React, { Component } from 'react';
 
+import Input from './Input';
+
 import hookActions from './actions/hookActions';
 
 /**
@@ -42,10 +44,16 @@ function App (){
   return (
     <div className="appContainer">
       <h1>Jotto</h1>
-      <Congrats success={true} />
+
+      <Input secretWord={state.secretWord} />
+
+
+
+      
+      {/* <Congrats success={true} />
       <GuessedWords guessedWords={[
         { guessedWord: 'fleeb', letterMatchCount: 3 }
-      ]} />
+      ]} /> */}
     </div>
   );
 }
