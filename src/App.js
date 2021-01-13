@@ -39,17 +39,22 @@ function App (){
     }, []
   );
 
-
+  if(!state.secretWord) {
+    return (
+      <div className="container spinnerWrapper">
+        <div className="spinner-border" role="status">
+          <span className="sr-only">Loading...</span>
+        </div>
+        <p>Loading secret word</p>
+      </div>
+    )
+  }
 
   return (
-    <div className="appContainer">
+    <div className="container appContainer">
       <h1>Jotto</h1>
 
       <Input secretWord={state.secretWord} />
-
-
-
-      
       {/* <Congrats success={true} />
       <GuessedWords guessedWords={[
         { guessedWord: 'fleeb', letterMatchCount: 3 }
