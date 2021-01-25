@@ -23,9 +23,19 @@ test('does not throw warning with expected props', () => {
 });
 
 test('calls non-zero language icons', () => {
+    const wrapper = setup();
+    const languageIcons = wrapper.find('.language-icon');
 
+    expect(languageIcons.length).toBeGreaterThan(0);
 });
 
 test('calls setLanguage on click', () => {
+    const wrapper = setup();
+    const languageIcons = wrapper.find('.language-icon');
 
+    // get the first icon
+    const firstIcon = languageIcons.first();
+    firstIcon.simulate("click");
+
+    expect(mockSetLanguage).toHaveBeenCalled();
 });
